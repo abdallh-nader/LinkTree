@@ -1,0 +1,42 @@
+Build a single-file link-in-bio page (index.html, no build step, ready for GitHub Pages).
+
+Content
+- A round profile photo (avatar.jpg next to the file). If it is missing, show a circle with the first letter of the name.
+- The name as the title and one short line under it (optional).
+- Pill-shaped link buttons in this order: Instagram, Facebook, Telegram, WhatsApp, Gmail.
+  Then a small divider heading "PROJECTS" and: GitHub, LinkedIn, Portfolio.
+- All names, URLs and the profile text live in one clearly marked block at the top of the script
+  (PROFILE and a LINKS array with title, url, icon, color and optional section), so a non-programmer can edit it.
+
+Look
+- Dark blue theme (about #050a1c to #0f2a66), light text, accent #4da3ff. Font: Poppins.
+- Official brand icons as inline SVG, in their brand colours (white for GitHub, the multicolour Gmail logo).
+- Buttons: glass look (semi-transparent with blur), a soft blue glow, a light sweep and a small lift on hover or focus.
+- The photo has no frame or ring; on hover it lifts a little and gets a blue shadow underneath.
+- Staggered fade-in when the page loads.
+
+Background
+- A 3D animated network with Three.js (pin r128 from cdnjs with an integrity hash).
+  Glowing dots drift through depth, lines join dots that are close (fainter when far, brighter when near the camera),
+  a few larger "hub" dots, a gentle sway, and a slight tilt toward the mouse or finger.
+- Use additive blending and give the scene the same dark blue gradient as its background.
+- Cap pixel ratio at 2, use fewer dots on phones, and do not rebuild the dots when only the height changes (mobile address bar).
+- If Three.js or WebGL is unavailable, fall back to a flat 2D canvas network.
+- Respect prefers-reduced-motion (draw one still frame).
+
+Quality
+- Mobile first: 390px wide must look right, with no horizontal scroll, tap targets at least 48px high, safe-area padding.
+- Links open in a new tab with rel="noopener noreferrer".
+- Do not put the page gradient on <body>, because it would paint over the canvas.
+
+My details (fill these in before sending)
+- Name:
+- Short line under the name (optional):
+- Instagram:
+- Facebook:
+- Telegram:
+- WhatsApp number (with country code):
+- Email:
+- GitHub:
+- LinkedIn:
+- Portfolio:
